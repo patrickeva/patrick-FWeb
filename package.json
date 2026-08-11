@@ -1,0 +1,10 @@
+{
+  "name": "my-freelance-web-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix patrick-freelance run dev -- --host 0.0.0.0",
+    "build": "npm --prefix patrick-freelance run build",
+    "preview": "npm --prefix patrick-freelance run preview"
+  }
+}
