@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd patrick-freelance && npm install && npm run build",
+  "outputDirectory": "patrick-freelance/dist",
+  "framework": "vite"
+}
