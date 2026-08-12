@@ -1,4 +1,18 @@
 /* Patrick Eva landing page styling */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.work-title-large,
+.card-copy,
+.tech-label,
+.step-title,
+.step-copy {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 :root {
   --ink: #0B1524;
   --ink-2: #0F1D30;
