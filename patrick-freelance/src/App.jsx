@@ -1,12 +1,66 @@
+import { useState } from 'react'
 import './App.css'
 
+const projects = [
+  {
+    label: 'TRICYCLE SYSTEM',
+    title: 'Tricycle Franchise Tracker',
+    desc: 'A centralized dashboard for monitoring tricycle franchise and license expirations across a municipality.',
+    tech: 'React · Vite · JavaScript · CSS',
+    img: '/images/image-1786497232527.png',
+    alt: 'Franchise Tracker background',
+    demo: 'https://tric-franchise-tracker.vercel.app',
+    github: 'https://github.com/patrickeva/Tric-Franchise-Tracker',
+  },
+  {
+    label: 'LEGISLATIVE TRACKER',
+    title: 'Cuenca Legislative Tracker',
+    desc: 'A public sector portal for tracking legislation, agendas, and meeting progress with a polished local government interface.',
+    tech: 'React · Vite · Web APIs · UI/UX',
+    img: '/images/image-1786497220605.png',
+    alt: 'Cuenca Legislative Tracker background',
+    demo: 'https://sb-cuenca-docsys.vercel.app',
+    github: 'https://github.com/patrickeva/sb-cuenca-docsys',
+  },
+  {
+    label: 'MUNICIPAL CALENDAR',
+    title: 'Municipal Cuenca Calendar',
+    desc: 'A public-facing calendar portal for viewing municipal events and official activities in a clean and organized interface.',
+    tech: 'React · Vite · Calendar UI · Web APIs',
+    img: '/images/calendar.png',
+    alt: 'Municipal Calendar background',
+    demo: 'https://municipal-cuenca-calendar.vercel.app',
+    github: 'https://github.com/patrickeva/Municipal-Cuenca-Calendar',
+  },
+  {
+    label: 'PERSONAL PORTFOLIO',
+    title: 'Personal Portfolio',
+    desc: 'A modern portfolio website showcasing freelance projects, case studies, and contact pathways.',
+    tech: 'React · Vite · CSS · Responsive design',
+    img: '/images/image-1786497201724.png',
+    alt: 'Personal Portfolio background',
+    demo: 'https://ptrkportfolio.vercel.app',
+    github: 'https://github.com/patrickeva/ptrk_portfolio',
+  },
+]
+
 function App() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const goPrev = () => {
+    setActiveIndex((i) => (i === 0 ? projects.length - 1 : i - 1))
+  }
+
+  const goNext = () => {
+    setActiveIndex((i) => (i === projects.length - 1 ? 0 : i + 1))
+  }
+
   return (
     <>
       <header className="site-header">
         <div className="nav-wrap">
           <a href="#top" className="brand">
-            <span className="brand-mark">▣</span> PATRICK EVA
+            <span className="brand-mark">▣</span> Digital Works 
           </a>
           <nav className="main-nav">
             <a href="#services" className="nav-link">[ SERVICES ]</a>
@@ -139,66 +193,66 @@ function App() {
         <div className="container">
           <span className="tag">03 — WORK</span>
           <h2 className="section-title work-title">Selected work</h2>
-          <div className="work-grid">
-            <article className="card work-card">
-              <div className="work-img-wrap">
-                <img
-                  src="/images/image-1786497201724.png"
-                  alt="Franchise Tracker background"
-                  className="work-img obj-top"
-                />
-              </div>
-              <div className="work-card-body">
-                <span className="mini-label">TRICYCLE SYSTEM</span>
-                <h3 className="work-title-large">Tricycle Franchise Tracker</h3>
-                <p className="card-copy">A centralized dashboard for monitoring tricycle franchise and license expirations across a municipality.</p>
-                <span className="tech-label">React · Vite · JavaScript · CSS</span>
-                <div className="work-links">
-                  <a href="https://tric-franchise-tracker.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
-                  <a href="https://github.com/patrickeva/Tric-Franchise-Tracker" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
-                </div>
-              </div>
-            </article>
 
-            <article className="card work-card">
-              <div className="work-img-wrap">
-                <img
-                  src="/images/image-1786497220605.png"
-                  alt="Cuenca Legislative Tracker background"
-                  className="work-img obj-top"
-                />
-              </div>
-              <div className="work-card-body">
-                <span className="mini-label">LEGISLATIVE TRACKER</span>
-                <h3 className="work-title-large">Cuenca Legislative Tracker</h3>
-                <p className="card-copy">A public sector portal for tracking legislation, agendas, and meeting progress with a polished local government interface.</p>
-                <span className="tech-label">React · Vite · Web APIs · UI/UX</span>
-                <div className="work-links">
-                  <a href="https://sb-cuenca-docsys.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
-                  <a href="https://github.com/patrickeva/sb-cuenca-docsys" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
-                </div>
-              </div>
-            </article>
+          <div className="slider">
+            <button
+              type="button"
+              className="slider-arrow slider-arrow-left"
+              onClick={goPrev}
+              aria-label="Previous project"
+            >
+              ‹
+            </button>
 
-            <article className="card work-card">
-              <div className="work-img-wrap">
-                <img
-                  src="/images/image-1786497232527.png"
-                  alt="Personal Portfolio background"
-                  className="work-img obj-face"
-                />
+            <div className="slider-viewport">
+              <div
+                className="slider-track"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {projects.map((project, index) => (
+                  <article className="card work-card slider-slide" key={project.title}>
+                    <div className="work-img-wrap">
+                      <img
+                        src={project.img}
+                        alt={project.alt}
+                        className="work-img obj-top"
+                      />
+                    </div>
+                    <div className="work-card-body">
+                      <span className="mini-label">{project.label}</span>
+                      <h3 className="work-title-large">{project.title}</h3>
+                      <p className="card-copy">{project.desc}</p>
+                      <span className="tech-label">{project.tech}</span>
+                      <div className="work-links">
+                        <a href={project.demo} target="_blank" rel="noreferrer" className="text-link">Live demo</a>
+                        <a href={project.github} target="_blank" rel="noreferrer" className="text-link">GitHub</a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
               </div>
-              <div className="work-card-body">
-                <span className="mini-label">PERSONAL PORTFOLIO</span>
-                <h3 className="work-title-large">Personal Portfolio</h3>
-                <p className="card-copy">A modern portfolio website showcasing freelance projects, case studies, and contact pathways.</p>
-                <span className="tech-label">React · Vite · CSS · Responsive design</span>
-                <div className="work-links">
-                  <a href="https://ptrkportfolio.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
-                  <a href="https://github.com/patrickeva/ptrk_portfolio" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
-                </div>
-              </div>
-            </article>
+            </div>
+
+            <button
+              type="button"
+              className="slider-arrow slider-arrow-right"
+              onClick={goNext}
+              aria-label="Next project"
+            >
+              ›
+            </button>
+          </div>
+
+          <div className="slider-dots">
+            {projects.map((project, index) => (
+              <button
+                key={project.title}
+                type="button"
+                className={`slider-dot ${index === activeIndex ? 'is-active' : ''}`}
+                onClick={() => setActiveIndex(index)}
+                aria-label={`Go to ${project.title}`}
+              />
+            ))}
           </div>
         </div>
       </section>
