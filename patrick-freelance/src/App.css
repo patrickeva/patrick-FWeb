@@ -417,19 +417,36 @@ body a {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+/* FIXED: no longer relies solely on aspect-ratio (unreliable on older/Android WebViews).
+   Uses a padding-top fallback so the box always has real height even if aspect-ratio
+   is ignored, and the image is absolutely positioned to fill it. */
 .work-img-wrap {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  position: relative;
   overflow: hidden;
   background: var(--ink-2);
   border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
+  aspect-ratio: 16 / 10;
+  flex-shrink: 0;
+}
+
+.work-img-wrap::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 62.5%; /* 10 / 16 ratio fallback */
+}
+
+@supports (aspect-ratio: 16 / 10) {
+  .work-img-wrap::before {
+    content: none;
+    padding-top: 0;
+  }
 }
 
 .work-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -498,8 +515,12 @@ body a {
   gap: 20px;
 }
 
+/* FIXED: explicit flex sizing + min-width: 0 so this flex child can't be
+   squeezed/collapsed oddly by some Android flexbox implementations. */
 .slider-viewport {
   overflow: hidden;
+  flex: 1 1 0%;
+  min-width: 0;
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
@@ -514,6 +535,7 @@ body a {
 .slider-slide {
   flex: 0 0 100%;
   max-width: 100%;
+  min-width: 0;
 }
 
 .slider-arrow {
