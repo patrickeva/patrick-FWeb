@@ -258,8 +258,9 @@ body a {
 
 .service-grid {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -275,6 +276,9 @@ body a {
 }
 
 .service-card {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 260px;
+  max-width: 380px;
   padding: 28px;
   border-radius: 10px;
   position: relative;
@@ -1110,12 +1114,16 @@ body a {
 }
 
 @media (max-width: 900px) {
-  .service-grid,
   .pricing-grid,
   .process-grid,
   .example-grid,
   .terms-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .process-grid::before {

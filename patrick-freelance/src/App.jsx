@@ -131,13 +131,6 @@ function App() {
 
             <article className="card service-card">
               <div className="corner-mark corner-top-left"></div>
-              <span className="mini-label">[ DATA/ML ]</span>
-              <h3 className="card-title">Data &amp; automation integrations</h3>
-              <p className="card-copy">Smart workflows, reporting, automation, and data-connected features for growing operations.</p>
-            </article>
-
-            <article className="card service-card">
-              <div className="corner-mark corner-top-left"></div>
               <span className="mini-label">[ MAINTAIN ]</span>
               <h3 className="card-title">Maintenance &amp; updates</h3>
               <p className="card-copy">Keep your website or system stable with ongoing improvements, fixes, and feature releases.</p>
