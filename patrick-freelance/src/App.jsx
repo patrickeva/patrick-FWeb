@@ -269,7 +269,7 @@ function App() {
           <div className="pricing-grid">
             <article className="card pricing-card">
               <span className="mini-label">ONE-PAGE</span>
-              <div className="price-title">₱4,000</div>
+              <div className="price-title">₱4,000 +</div>
               <span className="price-sub">Business site — starts at</span>
               <p className="card-copy">Everything a customer needs on one scrollable page: what you offer, your prices, hours, location, and a way to reach you. Built for a phone first, because that's where almost everyone will open it.</p>
               <ul className="feature-list">
@@ -291,7 +291,7 @@ function App() {
             <article className="card pricing-card highlighted-card">
               <span className="popular-badge">POPULAR</span>
               <span className="mini-label">FULL WEBSITE</span>
-              <div className="price-title">₱8,000</div>
+              <div className="price-title">₱8,000 +</div>
               <span className="price-sub">Business website — starts at</span>
               <p className="card-copy">Several sections with a filterable menu or service list, a photo gallery, and forms — reservations, pre-orders, inquiries — that land straight in your inbox or Messenger. Set up so it shares properly on Facebook and shows up on Google.</p>
               <ul className="feature-list">
@@ -306,14 +306,14 @@ function App() {
               </div>
               <div className="rush-note">
                 <span className="rush-label">⚡ Rush (4-5 days)</span>
-                <span className="rush-value">+₱3,000</span>
+                <span className="rush-value">+₱3,000 +</span>
               </div>
               <a href="#contact" className="btn btn-primary price-button">Ask for Quote</a>
             </article>
 
             <article className="card pricing-card">
               <span className="mini-label">CUSTOM SYSTEM</span>
-              <div className="price-title">₱15,000</div>
+              <div className="price-title">₱15,000 +</div>
               <span className="price-sub">Full system build — starts at</span>
               <p className="card-copy">Software your business actually runs on, not just a page about it — online booking with slots that lock in real time, customer records, staff logins, reports. Installs like an app on your phone and keeps working when the internet drops.</p>
               <ul className="feature-list">
@@ -342,12 +342,168 @@ function App() {
         </div>
       </section>
 
+      <section id="breakdown" className="section breakdown-section blueprint-grid-fine">
+        <div className="container">
+          <span className="tag">05 — BREAKDOWN &amp; ADD-ONS</span>
+          <h2 className="section-title breakdown-title">How the pricing actually works</h2>
+          <p className="breakdown-intro">
+            A price alone doesn't tell you much — so here's exactly what's included at each tier, what you can add on top,
+            and how payment is structured. No hidden charges: if a project needs something extra, you'll see it here
+            before we ever discuss your specific quote.
+          </p>
+
+          {/* ---------- WHAT'S INSIDE EACH PACKAGE (page/content examples) ---------- */}
+          <div className="breakdown-block">
+            <span className="mini-label accent-label">[ EXAMPLE PROJECTS ]</span>
+            <h3 className="breakdown-subtitle">What each tier looks like in a real project</h3>
+
+            <div className="example-grid">
+              <article className="card example-card">
+                <div className="corner-mark corner-top-left"></div>
+                <span className="mini-label">ONE-PAGE · ₱4,000 +</span>
+                <h4 className="example-title">Example: A Small Eatery or Sari-Sari Store</h4>
+                <p className="example-desc">Just one scrollable page, but complete:</p>
+                <ul className="example-list">
+                  <li>— Header + short business introduction</li>
+                  <li>— Menu / price list</li>
+                  <li>— About / location details</li>
+                  <li>— Messenger / call button</li>
+                  <li>— Google Maps embed</li>
+                </ul>
+                <p className="example-fit">Best for: small businesses that just need a basic online presence.</p>
+              </article>
+
+              <article className="card example-card">
+                <div className="corner-mark corner-top-left"></div>
+                <span className="mini-label">FULL WEBSITE · ₱8,000 +</span>
+                <h4 className="example-title">Example: A Cafe or Retail Shop</h4>
+                <p className="example-desc">4–6 sections or pages, with a few interactive parts:</p>
+                <ul className="example-list">
+                  <li>— Home / landing section</li>
+                  <li>— Filterable menu or product gallery</li>
+                  <li>— About Us</li>
+                  <li>— Reservation / order / inquiry form</li>
+                  <li>— Contact + location page</li>
+                </ul>
+                <p className="example-fit">Best for: businesses with products or services that customers need to browse and book online.</p>
+              </article>
+
+              <article className="card example-card">
+                <div className="corner-mark corner-top-left"></div>
+                <span className="mini-label">CUSTOM SYSTEM · ₱15,000 +</span>
+                <h4 className="example-title">Example: A Salon or Clinic Booking System</h4>
+                <p className="example-desc">A full system, not just a website:</p>
+                <ul className="example-list">
+                  <li>— Client-facing booking page (real-time slots)</li>
+                  <li>— Staff / admin login</li>
+                  <li>— Customer records dashboard</li>
+                  <li>— Monthly sales / reports view</li>
+                  <li>— Works without internet (offline-ready, installable app)</li>
+                </ul>
+                <p className="example-fit">Best for: businesses with staff, appointments, and a need for records tracking.</p>
+              </article>
+            </div>
+          </div>
+
+          {/* ---------- ADD-ONS ---------- */}
+          <div className="breakdown-block">
+            <span className="mini-label accent-label">[ OPTIONAL ADD-ONS ]</span>
+            <h3 className="breakdown-subtitle">Add these anytime — not included in the base price</h3>
+            <p className="breakdown-note">
+              The base prices above stay exactly as listed. The items below cover specific needs beyond the standard
+              package — you only pay for what your project actually requires.
+            </p>
+
+            <div className="addons-panel">
+              <div className="addon-item">
+                <span className="addon-name">Domain setup &amp; configuration</span>
+                <span className="addon-price">₱500 one-time</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Extra page / section</span>
+                <span className="addon-price">₱500–800 each</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Database / cloud storage integration</span>
+                <span className="addon-price">Starts at ₱3,000</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Online payment integration (GCash, PayMongo, etc.)</span>
+                <span className="addon-price">Starts at ₱4,000</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Content writing / copywriting</span>
+                <span className="addon-price">₱1,000–2,000</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Basic logo / branding kit</span>
+                <span className="addon-price">₱1,500–2,500</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">SEO basic setup (Google Business, meta tags, sitemap)</span>
+                <span className="addon-price">₱1,000</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Extra revision round (beyond the 2 included)</span>
+                <span className="addon-price">₱500 per round</span>
+              </div>
+              <div className="addon-item">
+                <span className="addon-name">Annual maintenance &amp; support plan</span>
+                <span className="addon-price">₱1,500–3,000 / year</span>
+              </div>
+            </div>
+          </div>
+
+          {/* ---------- PAYMENT TERMS + DELIVERABLES ---------- */}
+          <div className="terms-grid">
+            <article className="card terms-card">
+              <span className="mini-label">[ PAYMENT TERMS ]</span>
+              <h3 className="terms-title">How payment works</h3>
+              <ul className="terms-list">
+                <li><strong>One-Page &amp; Full Website:</strong> 50% downpayment to start, 50% before the site goes live. You always see the free working preview first, before any payment is made.</li>
+                <li><strong>Custom System:</strong> option to split into 3 milestones — 30% downpayment, 40% once core features pass testing, 30% on deployment/handover.</li>
+                <li>GCash or bank transfer accepted, with proof of payment / receipt provided.</li>
+                <li>Rush fees (see pricing cards above) are added on top of the base price, not the downpayment.</li>
+              </ul>
+            </article>
+
+            <article className="card terms-card">
+              <span className="mini-label">[ DELIVERABLES &amp; INCLUSIONS ]</span>
+              <h3 className="terms-title">Who brings what</h3>
+              <div className="deliverables-columns">
+                <div className="deliverable-col">
+                  <span className="deliverable-heading">You provide</span>
+                  <ul className="deliverable-list">
+                    <li>Business info (services, prices, hours)</li>
+                    <li>Photos / logo (or add the branding add-on)</li>
+                    <li>Social media &amp; contact details</li>
+                    <li>Feedback within the revision period</li>
+                  </ul>
+                </div>
+                <div className="deliverable-col">
+                  <span className="deliverable-heading">I provide</span>
+                  <ul className="deliverable-list">
+                    <li>Full design &amp; development</li>
+                    <li>Mobile-responsive layout</li>
+                    <li>Free hosting setup</li>
+                    <li>Testing across devices/browsers</li>
+                    <li>2 revision rounds included</li>
+                    <li>Handover walkthrough + accounts in your name</li>
+                    <li>30 days free bug-fix support after launch</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="section contact-section">
         <div className="contact-bg blueprint-grid"></div>
         <div className="container contact-content">
           <div className="contact-card">
             <div className="contact-glow"></div>
-            <span className="tag">05 — GET IN TOUCH</span>
+            <span className="tag">06 — GET IN TOUCH</span>
             <h2 className="contact-title">Need a website or a system<br />for your business?</h2>
 
             <div className="contact-actions">

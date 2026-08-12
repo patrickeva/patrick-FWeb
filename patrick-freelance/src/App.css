@@ -730,6 +730,189 @@ body a {
   color: var(--text-faint);
 }
 
+/* ==========================================================================
+   PRICING BREAKDOWN & ADD-ONS (new section, between Packages and Contact)
+   ========================================================================== */
+
+.breakdown-section {
+  border-top: 1px solid var(--line);
+}
+
+.breakdown-title {
+  margin-bottom: 20px;
+}
+
+.breakdown-intro {
+  max-width: 720px;
+  margin: 18px 0 54px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.breakdown-block {
+  margin-bottom: 56px;
+}
+
+.breakdown-block:last-of-type {
+  margin-bottom: 40px;
+}
+
+.breakdown-subtitle {
+  margin: 10px 0 28px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.breakdown-note {
+  max-width: 640px;
+  margin: -14px 0 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ---------- Example cards (pricing walkthroughs) ---------- */
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.example-card {
+  padding: 28px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.example-title {
+  margin: 14px 0 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.example-desc {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.example-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 16px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--text-soft);
+}
+
+.example-fit {
+  margin: auto 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--teal);
+  line-height: 1.6;
+}
+
+/* ---------- Add-ons panel ---------- */
+
+.addons-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  column-gap: 40px;
+}
+
+.addon-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.addon-name {
+  font-size: 14px;
+  color: var(--paper);
+}
+
+.addon-price {
+  flex: 0 0 auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- Payment terms + deliverables ---------- */
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.terms-card {
+  padding: 34px;
+  border-radius: 10px;
+}
+
+.terms-title {
+  margin: 16px 0 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+}
+
+.terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.terms-list strong {
+  color: var(--paper);
+}
+
+.deliverables-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.deliverable-heading {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+}
+
+.deliverable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
 .preview-cta-section {
   padding-top: 0;
   padding-bottom: 0;
@@ -929,7 +1112,9 @@ body a {
 @media (max-width: 900px) {
   .service-grid,
   .pricing-grid,
-  .process-grid {
+  .process-grid,
+  .example-grid,
+  .terms-grid {
     grid-template-columns: 1fr;
   }
 
@@ -977,5 +1162,13 @@ body a {
 
   .contact-socials {
     gap: 10px;
+  }
+
+  .addons-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .deliverables-columns {
+    grid-template-columns: 1fr;
   }
 }
