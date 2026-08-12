@@ -141,16 +141,63 @@ function App() {
           <h2 className="section-title work-title">Selected work</h2>
           <div className="work-grid">
             <article className="card work-card">
-              <span className="mini-label">LGU / GOVERNMENT</span>
-              <h3 className="work-title-large">Full-stack development — Municipal Government of Cuenca</h3>
-              <p className="card-copy">A full-stack system developed through a 400-hour practical development experience for a local government office.</p>
-              <span className="tech-label">React · Vite · Tailwind · Supabase</span>
+              <div className="work-img-wrap">
+                <img
+                  src="/images/image-1786497201724.png"
+                  alt="Franchise Tracker background"
+                  className="work-img obj-top"
+                />
+              </div>
+              <div className="work-card-body">
+                <span className="mini-label">TRICYCLE SYSTEM</span>
+                <h3 className="work-title-large">Tricycle Franchise Tracker</h3>
+                <p className="card-copy">A centralized dashboard for monitoring tricycle franchise and license expirations across a municipality.</p>
+                <span className="tech-label">React · Vite · JavaScript · CSS</span>
+                <div className="work-links">
+                  <a href="https://tric-franchise-tracker.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
+                  <a href="https://github.com/patrickeva/Tric-Franchise-Tracker" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
+                </div>
+              </div>
             </article>
+
             <article className="card work-card">
-              <span className="mini-label">CIVIC PROJECT</span>
-              <h3 className="work-title-large">iSkolar ng Cuenca — Scholarship application system</h3>
-              <p className="card-copy">A scholarship application platform built to support front-end and back-end workflows.</p>
-              <span className="tech-label">React · Firebase</span>
+              <div className="work-img-wrap">
+                <img
+                  src="/images/image-1786497220605.png"
+                  alt="Cuenca Legislative Tracker background"
+                  className="work-img obj-top"
+                />
+              </div>
+              <div className="work-card-body">
+                <span className="mini-label">LEGISLATIVE TRACKER</span>
+                <h3 className="work-title-large">Cuenca Legislative Tracker</h3>
+                <p className="card-copy">A public sector portal for tracking legislation, agendas, and meeting progress with a polished local government interface.</p>
+                <span className="tech-label">React · Vite · Web APIs · UI/UX</span>
+                <div className="work-links">
+                  <a href="https://sb-cuenca-docsys.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
+                  <a href="https://github.com/patrickeva/sb-cuenca-docsys" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article className="card work-card">
+              <div className="work-img-wrap">
+                <img
+                  src="/images/image-1786497232527.png"
+                  alt="Personal Portfolio background"
+                  className="work-img obj-face"
+                />
+              </div>
+              <div className="work-card-body">
+                <span className="mini-label">PERSONAL PORTFOLIO</span>
+                <h3 className="work-title-large">Personal Portfolio</h3>
+                <p className="card-copy">A modern portfolio website showcasing freelance projects, case studies, and contact pathways.</p>
+                <span className="tech-label">React · Vite · CSS · Responsive design</span>
+                <div className="work-links">
+                  <a href="https://ptrkportfolio.vercel.app" target="_blank" rel="noreferrer" className="text-link">Live demo</a>
+                  <a href="https://github.com/patrickeva/ptrk_portfolio" target="_blank" rel="noreferrer" className="text-link">GitHub</a>
+                </div>
+              </div>
             </article>
           </div>
         </div>
