@@ -1,3 +1,4 @@
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { useState } from 'react'
 import './App.css'
 
@@ -65,7 +66,7 @@ function App() {
 
           <a href="#top" className="brand">
             <img
-              src="/images/F-profile.png"
+              src="/images/LOGOOO.png"
               alt="Patrick Eva"
               className="brand-mark-img"
             />
@@ -196,7 +197,7 @@ function App() {
             </span>
 
             <h2 className="section-title profile-name">
-              Hi, I'm <span>Patrick</span>
+              Hi, I'm <span>Patrick </span>
             </h2>
 
             <p className="profile-role">
@@ -1145,97 +1146,98 @@ function App() {
 
 
       {/* =========================
-          CONTACT
+    CONTACT
+========================== */}
+<section
+  id="contact"
+  className="section contact-section"
+>
+  <div className="contact-bg blueprint-grid"></div>
+
+  <div className="container contact-content">
+    <div className="contact-card">
+
+      <div className="contact-glow"></div>
+
+      <span className="tag">
+        06 — GET IN TOUCH
+      </span>
+
+      <h2 className="contact-title">
+        Need a website or a system
+        <br />
+        for your business?
+      </h2>
+
+      <div className="contact-actions">
+
+        <a
+          href="mailto:patrickramoseva@gmail.com"
+          className="btn btn-primary btn-large"
+        >
+          patrickramoseva@gmail.com
+        </a>
+
+        <a
+          href="https://www.facebook.com/ptrkrmseva/"
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-outline btn-large contact-facebook"
+        >
+          Facebook Message
+        </a>
+
+      </div>
+
+      <p className="contact-footnote">
+        Philippines · Available for remote freelance projects
+      </p>
+
+      <div className="contact-divider"></div>
+
+      {/* =========================
+          SOCIAL MEDIA
       ========================== */}
-      <section
-        id="contact"
-        className="section contact-section"
-      >
+      <div className="contact-socials">
 
-        <div className="contact-bg blueprint-grid"></div>
+        {/* FACEBOOK */}
+        <a
+          href="https://www.facebook.com/ptrkrmseva/"
+          target="_blank"
+          rel="noreferrer"
+          className="social-icon-btn fb"
+          aria-label="Facebook"
+        >
+          <FaFacebookF />
+        </a>
 
-        <div className="container contact-content">
+        {/* INSTAGRAM */}
+        <a
+          href="https://www.instagram.com/_ptrkeva/"
+          target="_blank"
+          rel="noreferrer"
+          className="social-icon-btn ig"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
 
-          <div className="contact-card">
+        {/* WHATSAPP */}
+        <a
+          href="https://wa.me/639683072740"
+          target="_blank"
+          rel="noreferrer"
+          className="social-icon-btn wa"
+          aria-label="WhatsApp"
+        >
+          <FaWhatsapp />
+        </a>
 
-            <div className="contact-glow"></div>
+      </div>
 
-            <span className="tag">
-              06 — GET IN TOUCH
-            </span>
-
-            <h2 className="contact-title">
-              Need a website or a system
-              <br />
-              for your business?
-            </h2>
-
-            <div className="contact-actions">
-
-              <a
-                href="mailto:patrickramoseva@gmail.com"
-                className="btn btn-primary btn-large"
-              >
-                patrickramoseva@gmail.com
-              </a>
-
-              <a
-                href="https://www.facebook.com/ptrkrmseva/"
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-outline btn-large contact-facebook"
-              >
-                Facebook Message
-              </a>
-
-            </div>
-
-            <p className="contact-footnote">
-              Philippines · Available for remote freelance projects
-            </p>
-
-            <div className="contact-divider"></div>
-
-            <div className="contact-socials">
-
-              <a
-                href="https://www.facebook.com/ptrkrmseva/"
-                target="_blank"
-                rel="noreferrer"
-                className="social-icon-btn fb"
-                aria-label="Facebook"
-              >
-                f
-              </a>
-
-              <a
-                href="https://www.instagram.com/_ptrkeva/"
-                target="_blank"
-                rel="noreferrer"
-                className="social-icon-btn ig"
-                aria-label="Instagram"
-              >
-                ◎
-              </a>
-
-              <a
-                href="https://wa.me/639683072740"
-                target="_blank"
-                rel="noreferrer"
-                className="social-icon-btn wa"
-                aria-label="WhatsApp"
-              >
-                ☎
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
+    </div>
+  </div>
+</section>
 
       {/* =========================
           FOOTER

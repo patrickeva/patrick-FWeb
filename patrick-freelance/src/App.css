@@ -1810,63 +1810,137 @@ button {
     rgba(255, 255, 255, 0.14);
 }
 
+/* =========================================================
+   SOCIAL MEDIA ICONS
+========================================================= */
+
 .contact-socials {
-  margin-top: 20px;
+  margin-top: 24px;
 
   display: flex;
-
+  align-items: center;
   justify-content: center;
 
-  gap: 10px;
+  gap: 14px;
 }
 
+
+/* =========================
+   BASE SOCIAL BUTTON
+========================= */
+
 .social-icon-btn {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  color: white;
+  color: #ffffff;
 
-  font-weight: 800;
+  text-decoration: none;
+
+  font-size: 20px;
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
 }
+
+
+/* Actual React Icon */
+
+.social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+
+  display: block;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
 
 .social-icon-btn:hover {
   transform:
-    translateY(-4px)
-    scale(1.05);
+    translateY(-6px)
+    scale(1.08);
+
+  filter: brightness(1.08);
 
   box-shadow:
-    0 12px 25px
-    rgba(0, 0, 0, 0.25);
+    0 12px 28px rgba(0, 0, 0, 0.28);
 }
+
+.social-icon-btn:hover svg {
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
 
 .social-icon-btn.fb {
   background: #1877f2;
+
+  box-shadow:
+    0 8px 20px rgba(24, 119, 242, 0.22);
 }
+
+.social-icon-btn.fb:hover {
+  box-shadow:
+    0 14px 30px rgba(24, 119, 242, 0.42);
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
 
 .social-icon-btn.ig {
   background:
     linear-gradient(
       135deg,
-      #f58529,
-      #dd2a7b,
-      #8134af,
-      #515bd4
+      #feda75 0%,
+      #fa7e1e 25%,
+      #d62976 55%,
+      #962fbf 78%,
+      #4f5bd5 100%
     );
+
+  box-shadow:
+    0 8px 20px rgba(214, 41, 118, 0.22);
 }
+
+.social-icon-btn.ig:hover {
+  box-shadow:
+    0 14px 30px rgba(214, 41, 118, 0.42);
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
 
 .social-icon-btn.wa {
   background: #25d366;
+
+  box-shadow:
+    0 8px 20px rgba(37, 211, 102, 0.22);
+}
+
+.social-icon-btn.wa:hover {
+  box-shadow:
+    0 14px 30px rgba(37, 211, 102, 0.42);
 }
 
 
