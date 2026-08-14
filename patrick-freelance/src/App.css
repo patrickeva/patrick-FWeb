@@ -1099,12 +1099,15 @@ button {
 
   overflow: hidden;
 
-  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
 }
 
 .work-img {
   position: absolute;
-
   inset: 0;
 
   width: 100%;
@@ -1112,14 +1115,17 @@ button {
 
   display: block;
 
-  object-fit: cover;
+  /* SHOW THE ENTIRE PROJECT IMAGE */
+  object-fit: contain;
+  object-position: center;
 
   transition:
     transform 0.5s ease;
 }
 
+/* Very subtle hover zoom without cutting the image */
 .work-card:hover .work-img {
-  transform: scale(1.045);
+  transform: scale(1.015);
 }
 
 .work-card-body {
